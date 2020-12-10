@@ -1,0 +1,26 @@
+﻿<Window x:Class="DarwinUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DarwinUI"
+        mc:Ignorable="d"
+        Title="Form" Height="450" Width="800" ResizeMode="NoResize" AllowsTransparency="True" WindowStyle="None" Background="#00000000" Visibility="Visible" Foreground="Black">
+    <Border CornerRadius="5" Background="White" BorderBrush="Gray" BorderThickness="0.3">
+        <Grid Margin="0,1,0,-1">
+            <Border BorderBrush="Black" BorderThickness="0" Margin="0,0,0,425" CornerRadius="10, 10, 0, 0" MouseLeftButtonDown="drag">
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0"/>
+                        <GradientStop Color="#FFCBCBCB" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Grid>
+                    <Ellipse Stroke="#00000000" Margin="8,5,778,6" MouseLeftButtonDown="exitwin" Fill="Red" Width="14" Height="14"/>
+                    <Ellipse Stroke="#00000000" Margin="27,5,759,6" MouseLeftButtonDown="minimisewin" Fill="#FFFFAE00" Width="14" Height="14"/>
+                    <Label x:Name="label1" Content="Form" HorizontalAlignment="Center" Margin="366,-2,389,-3" VerticalAlignment="Center" Height="30" FontSize="14" FontFamily="Microsoft YaHei UI" Width="46"/>
+                </Grid>
+            </Border>
+        </Grid>
+    </Border>
+</Window>
